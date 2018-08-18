@@ -34,6 +34,19 @@ foreach($line in [System.IO.File]::ReadLines("sitemap.txt")) {
 pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= url %>-<%= size %><%= crop %>"}
 ```
 
+### Or try Linux BASH
+
+```bash
+export WORKDIR="/home/trey/treyhome/Desktop/windowworldtylertexas";
+export IMGDIR="${WORKDIR}/screenshots/chrome";
+export SITEMAP="${WORKDIR}/sitemap.txt";
+readarray -t sites < ${SITEMAP};
+for site in "${sites[@]}"; do 
+pageres --overwrite ${site} 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="${IMGDIR}/<%= url %>-<%= size %><%= crop %>";
+done;
+ls -al ${IMGDIR}
+```
+
 <!-- 
 
 ```powershell
