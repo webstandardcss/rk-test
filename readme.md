@@ -33,7 +33,9 @@ Run The following powershell after creating the sitemap.txt using the above step
 foreach($line in [System.IO.File]::ReadLines("sitemap.txt")) {
 pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= url %>-<%= size %><%= crop %>"}
 ```
+
 <!-- 
+
 ```powershell
 foreach($line in [System.IO.File]::ReadLines("sitemap.txt")) { pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= date %>_<%= url %>-<%= size %><%= crop %>"}
 ```
@@ -53,13 +55,17 @@ foreach($url in [System.IO.File]::ReadLines("./sitemap.txt")) {
     }
 }
 ```
+
 -->
 
 ## BASH script generates Chrome screenshots.
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+http://www.techoism.com/how-to-install-git-bash-on-windows/
 
 ```bash
 # Get URL From sitemap.txt
 # Write-Host $url $name $res;
+ln -s /mnt/c ~/c; # Ubuntu mountpoint for c drive
 ln -s ~/c/Program\ Files/Mozilla\ Firefox/ ~/c/bin/moz;
 export WORKDIR="/home/trey/treyhome/Desktop/windowworldtylertexas";
 export IMGDIR="${WORKDIR}/screenshots/firefox";
