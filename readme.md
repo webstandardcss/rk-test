@@ -25,13 +25,17 @@ Get lines from the XML sitemap and use the following regex to clean the file.
 * Find \n
 * Replace *WITH NOTHING*
 
-## Powershell script generates the screenshots.
+## Powershell script generates Chrome screenshots.
 
 Run The following powershell after creating the sitemap.txt using the above steps.
 
 ```powershell
 foreach($line in [System.IO.File]::ReadLines("sitemap.txt")) {
-pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= date %>_<%= url %>-<%= size %><%= crop %>"}
+pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= url %>-<%= size %><%= crop %>"}
+```
+<!-- 
+```powershell
+foreach($line in [System.IO.File]::ReadLines("sitemap.txt")) { pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=jpg --filename="screenshots/chrome/<%= date %>_<%= url %>-<%= size %><%= crop %>"}
 ```
 
 **Must add firefox to PATH**
@@ -49,7 +53,9 @@ foreach($url in [System.IO.File]::ReadLines("./sitemap.txt")) {
     }
 }
 ```
+-->
 
+## BASH script generates Chrome screenshots.
 
 ```bash
 # Get URL From sitemap.txt
@@ -83,6 +89,8 @@ ls ${IMGDIR};
 cd ${WORKDIR};
 ```
 
+### Bash Single Screenshot
+
 ```bash
 # Single screenshot prototype custom directory
 # Write-Host $url $name $res;
@@ -99,6 +107,6 @@ echo $FIREFOXcmd;
 mkdir -p $FIREFOXdst;
 $($FIREFOXcmd) && ls $FIREFOXimg;
 mv $FIREFOXdir/$FIREFOXimg $FIREFOXdst;
-ls -al $FIREFOXdst/*.{png,jpg,gif,PNG,JPG,GIF}
+ls -al $FIREFOXdst;
 ```
 
