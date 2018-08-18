@@ -58,7 +58,7 @@ foreach($url in [System.IO.File]::ReadLines("./sitemap.txt")) {
 
 -->
 
-## BASH script generates Chrome screenshots.
+## BASH script generates Firefox screenshots.
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 http://www.techoism.com/how-to-install-git-bash-on-windows/
 
