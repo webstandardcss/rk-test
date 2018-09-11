@@ -83,7 +83,7 @@ http://www.techoism.com/how-to-install-git-bash-on-windows/
 # Write-Host $url $name $res;
 ln -s /mnt/c ~/c; # Ubuntu mountpoint for c drive
 ln -s ~/c/Program\ Files/Mozilla\ Firefox/ ~/c/bin/moz;
-export WORKDIR="/home/trey/treyhome/Desktop/windowworldtylertexas";
+export WORKDIR="/home/trey/treyhome/Desktop/eta-tests";
 export IMGDIR="${WORKDIR}/screenshots/firefox";
 export SITEMAP="${WORKDIR}/sitemap.txt";
 export FIREFOXdir="/home/trey/c/bin/moz";
@@ -96,7 +96,7 @@ for site in "${sites[@]}"; do
   for res in ${FIREFOXres[@]}; do
     # echo hey $site $res; 
     filename=${site};
-    filename=${filename/http:\/\/windowworldtylertexas\.com\///};
+    filename=${filename/http:\/\/attorneysanchez\.com\///};
     filename=${filename/\.php$//};
     filename=$(echo ${filename} | sed -e 's/\//_/g');
     filename=$(echo ${filename} | sed -e 's/^_//g');
