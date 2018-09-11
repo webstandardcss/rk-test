@@ -1,4 +1,4 @@
-# Attorney Sanchez
+# Site Name
 http://attorneysanchez.com
 
 # Responsive Chrome Screenshots
