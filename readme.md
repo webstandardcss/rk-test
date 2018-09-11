@@ -1,5 +1,5 @@
 # Site Name
-http://attorneysanchez.com
+http://yoursite.com
 
 # Responsive Chrome Screenshots
 
