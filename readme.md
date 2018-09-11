@@ -40,7 +40,7 @@ pageres --overwrite $line 1280x800 1920x1080 768x1024 640x800 375x800 --format=j
 ### Or try Linux BASH
 
 ```bash
-export WORKDIR="/home/trey/treyhome/Desktop/windowworldtylertexas";
+export WORKDIR="/home/trey/trey/Desktop/windowworldtylertexas";
 export IMGDIR="${WORKDIR}/screenshots/chrome";
 export SITEMAP="${WORKDIR}/sitemap.txt";
 readarray -t sites < ${SITEMAP};
@@ -83,7 +83,7 @@ http://www.techoism.com/how-to-install-git-bash-on-windows/
 # Write-Host $url $name $res;
 ln -s /mnt/c ~/c; # Ubuntu mountpoint for c drive
 ln -s ~/c/Program\ Files/Mozilla\ Firefox/ ~/c/bin/moz;
-export WORKDIR="/home/trey/treyhome/Desktop/eta-tests";
+export WORKDIR="/home/trey/trey/Desktop/eta-tests";
 export IMGDIR="${WORKDIR}/screenshots/firefox";
 export SITEMAP="${WORKDIR}/sitemap.txt";
 export FIREFOXdir="/home/trey/c/bin/moz";
