@@ -1,0 +1,59 @@
+# This is a generated LinkChecker project file. Do not edit
+
+[output]
+
+
+
+
+[text]
+
+[gml]
+
+[dot]
+
+[csv]
+
+[sql]
+
+[html]
+
+[blacklist]
+
+[xml]
+
+[gxml]
+
+[sitemap]
+
+
+[checking]
+
+[filtering]
+
+
+
+
+[authentication]
+
+
+
+
+
+
+
+
+
+
+
+
+
+[project]
+url = WindowWorldTylerTexas.com
+
+[gui]
+ignorelines = 
+warninglines = 
+recursionlevel = -1
+verbose = False
+debug = False
+
